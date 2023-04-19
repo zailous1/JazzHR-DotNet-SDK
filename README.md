@@ -2,9 +2,6 @@
 
 JazzHR-DotNET-SDK
 =============
-<p align="center">
-    <img src="./images/nugetLogo.png" width="128" alt="Logo"/>
-</p>
 
 **Unofficial C# .NET SDK for JazzHR**<br/><br/>
 **Note: This enthusiast project is not affiliated with JazzHR or its parent company Employ Inc in any way. Use at your own risk. YMMV. We make no guarantees of any kind.**
