@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazzHR-DotNET-SDK", "JazzHR-DotNET-SDK\JazzHR-DotNET-SDK.csproj", "{D216C51D-819E-46EB-B94C-A2E2EDB4607E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazzHR-DotNet-SDK-Tests", "JazzHR-DotNet-SDK-Tests\JazzHR-DotNet-SDK-Tests.csproj", "{FAF68D57-0F2D-4C82-A4F2-28FC8ABBE8AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D216C51D-819E-46EB-B94C-A2E2EDB4607E}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{D216C51D-819E-46EB-B94C-A2E2EDB4607E}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{D216C51D-819E-46EB-B94C-A2E2EDB4607E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D216C51D-819E-46EB-B94C-A2E2EDB4607E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42834C4A-1937-461D-86EB-664379FEAEF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42834C4A-1937-461D-86EB-664379FEAEF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42834C4A-1937-461D-86EB-664379FEAEF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42834C4A-1937-461D-86EB-664379FEAEF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF68D57-0F2D-4C82-A4F2-28FC8ABBE8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF68D57-0F2D-4C82-A4F2-28FC8ABBE8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF68D57-0F2D-4C82-A4F2-28FC8ABBE8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF68D57-0F2D-4C82-A4F2-28FC8ABBE8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA8C9401-6572-44A3-8328-1F86074EB884}
+	EndGlobalSection
+EndGlobal
