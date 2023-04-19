@@ -11,7 +11,7 @@
     <Company>Zailous</Company>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>C:\Users\dswee\source\repos\mykey.snk</AssemblyOriginatorKeyFile>
-    <Authors>dustinwsweet</Authors>
+    <Authors>zailous1</Authors>
     <Description>A .NET API Client to the JazzHR Api.</Description>
     <Copyright>2023</Copyright>
     <PackageIcon>images\nugetLogo.png</PackageIcon>
@@ -27,10 +27,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\license.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
     <None Include="..\README.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>True</Pack>
@@ -56,6 +52,8 @@
     </None>
     <None Update="license.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
