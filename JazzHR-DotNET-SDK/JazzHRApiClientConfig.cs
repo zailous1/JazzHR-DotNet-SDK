@@ -16,7 +16,7 @@
         public string? SandcastleTicket { get; private set; }
 
         /// <summary>
-        /// Gets or sets the Sandcastle ticket used to authenticate with the Jazz HR API.
+        /// Gets or sets the Max Page Results to be returned in queries to the Jazz HR API.
         /// </summary>
         public int MaxPageResults { get; private set; }
 
@@ -34,6 +34,7 @@
         /// </summary>
         /// <param name="apiKey">The API key used to authenticate with the Jazz HR API.</param>
         /// <param name="sandcastleTicket">The Sandcastle ticket used to authenticate with the Jazz HR API.</param>
+        /// <param name="maxPageResults">The Max Page Results to be returned in queries to the Jazz HR API. Defaults to 100.</param>
         public JazzHRApiClientConfig(string apiKey, string? sandcastleTicket, int maxPageResults = 100)
         {
             APIKey = apiKey;
