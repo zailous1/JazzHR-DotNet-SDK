@@ -9,6 +9,7 @@ namespace Zailous.JazzHR
     /// </summary>
     internal class HttpClient : IHttpClient
     {
+        private const string BASE_URL = "https://api.resumatorapi.com/v1/";
         private const string DOWNLOAD_URL = "https://app.jazz.co/files/download/";
 
         private readonly string _baseUrl;
@@ -39,11 +40,11 @@ namespace Zailous.JazzHR
             IRestClientFactory restClientFactory)
         {
             _config = config ?? throw new ArgumentNullException(nameof(config));
-            _baseUrl = config.BaseUrl;
+            _baseUrl = BASE_URL;
             _apiKey = config.APIKey;
             _sandcastleTicket = config.SandcastleTicket;
             _restClientFactory = restClientFactory;
-            _restClient = _restClientFactory.CreateRestClient(_baseUrl);
+            _restClient = _restClientFactory.CreateRestClient(BASE_URL);
         }
 
         /// <summary>
