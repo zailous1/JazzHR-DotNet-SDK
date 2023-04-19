@@ -18,7 +18,7 @@ namespace Zailous.JazzHR.Tests
 
         public ApiClientTests()
         {
-            _config = new JazzHRApiClientConfig("", "test_api_key", "");
+            _config = new JazzHRApiClientConfig("test_api_key");
 
             _apiClient = new JazzHRApiClient(_httpClientMock.Object, _config, _loggerMock.Object, maxPageResults: 2);
         }
@@ -26,9 +26,10 @@ namespace Zailous.JazzHR.Tests
         [TestMethod]
         public void ApiClient_DefaultConstructor_InitializesProperties()
         {
+            const int MAX_PAGE_RESULTS = 75;
             // Arrange
             var httpClientMock = new Mock<IHttpClient>();
-            var configuration = new JazzHRApiClientConfig("", "test_api_key", "");
+            var configuration = new JazzHRApiClientConfig("test_api_key", "", MAX_PAGE_RESULTS);
             var loggerMock = new Mock<ILogger<JazzHRApiClient>>();
 
             // Act
@@ -37,7 +38,7 @@ namespace Zailous.JazzHR.Tests
             // Assert
             apiClient.Should().NotBeNull();
             apiClient.ApiKey.Should().Be("test_api_key");
-            apiClient.MaxPageResults.Should().Be(JazzHRApiClient.DefaultMaxPageResults);
+            apiClient.MaxPageResults.Should().Be(MAX_PAGE_RESULTS);
         }
 
         [TestMethod]
@@ -45,7 +46,7 @@ namespace Zailous.JazzHR.Tests
         {
             // Arrange
             var httpClientMock = new Mock<IHttpClient>();
-            var configuration = new JazzHRApiClientConfig("", "test_api_key", "");
+            var configuration = new JazzHRApiClientConfig("test_api_key");
             var loggerMock = new Mock<ILogger<JazzHRApiClient>>();
 
             // Act

@@ -24,7 +24,7 @@ namespace Zailous.JazzHR.Tests
             _restClientFactoryMock = new Mock<IRestClientFactory>();
             _restClientMock = new Mock<IRestClient>();
 
-            _config = new JazzHRApiClientConfig("https://api.jazz.co/", "abc123", "ticket");
+            _config = new JazzHRApiClientConfig("abc123", "ticket");
 
             _restClientFactoryMock.Setup(f => f.CreateRestClient(It.IsAny<string>())).Returns(_restClientMock.Object);
 

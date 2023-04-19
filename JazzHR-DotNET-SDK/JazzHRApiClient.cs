@@ -1,5 +1,4 @@
 ﻿using Zailous.JazzHR.Models;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
@@ -14,7 +13,6 @@ namespace Zailous.JazzHR
         private readonly JazzHRApiClientConfig _config;
         private readonly ILogger<JazzHRApiClient> _logger;
 
-        internal static int DefaultMaxPageResults => 100;
         internal string ApiKey { get; private set; }
         internal int MaxPageResults { get; private set; }
 
@@ -23,8 +21,8 @@ namespace Zailous.JazzHR
         /// </summary>
         /// <param name="config">An instance of a configuration object containing the API key.</param>
         /// <param name="logger">An instance of a logger used for logging.</param>        
-        public JazzHRApiClient(JazzHRApiClientConfig config, ILogger<JazzHRApiClient> logger)
-            :this(new HttpClient(config), config, logger)
+        public JazzHRApiClient(string apiKey, ILogger<JazzHRApiClient> logger)
+            : this(new HttpClient(new JazzHRApiClientConfig(apiKey)), new JazzHRApiClientConfig(apiKey), logger)
         {
         }
 
@@ -32,10 +30,9 @@ namespace Zailous.JazzHR
         /// Initializes a new instance of the <see cref="JazzHRApiClient"/> class.
         /// </summary>
         /// <param name="config">An instance of a configuration object containing the API key.</param>
-        /// <param name="logger">An instance of a logger used for logging.</param> 
-        /// <param name="maxPageResults">Maximum number of results to be returned in a single page.</param>
-        public JazzHRApiClient(JazzHRApiClientConfig config, ILogger<JazzHRApiClient> logger, int maxPageResults)
-            : this(new HttpClient(config), config, logger, maxPageResults)
+        /// <param name="logger">An instance of a logger used for logging.</param>        
+        public JazzHRApiClient(JazzHRApiClientConfig config, ILogger<JazzHRApiClient> logger)
+            : this(new HttpClient(config), config, logger)
         {
         }
 
@@ -52,7 +49,7 @@ namespace Zailous.JazzHR
             _logger = logger;
 
             ApiKey = _config.APIKey;
-            MaxPageResults = DefaultMaxPageResults;
+            MaxPageResults = config.MaxPageResults;
         }
 
         /// <summary>

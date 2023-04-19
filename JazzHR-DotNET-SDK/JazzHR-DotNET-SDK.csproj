@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <SignAssembly>True</SignAssembly>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>JazzHR .NET SDK</Title>
     <Company>Zailous</Company>
     <SignAssembly>true</SignAssembly>
@@ -14,8 +14,29 @@
     <Authors>dustinwsweet</Authors>
     <Description>A .NET API Client to the JazzHR Api.</Description>
     <Copyright>2023</Copyright>
-    <PackageIcon>nugetLogo.png</PackageIcon>
+    <PackageIcon>images\nugetLogo.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/zailous1/JazzHR-DotNet-SDK</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zailous1/JazzHR-DotNet-SDK</RepositoryUrl>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <PackageTags>JazzHR</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\license.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
@@ -31,6 +52,10 @@
     <None Update="images\nugetLogo.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
