@@ -11,6 +11,8 @@ JazzHR-DotNET-SDK
 **Support:** [![Help](https://img.shields.io/badge/Support-Zailous%20Developer-blue.svg)](https://zailous.com/contact)  
 **Binaries:** [![Nuget](https://img.shields.io/badge/Nuget-Package-blue.svg)](https://www.nuget.org/packages/JazzHR-DotNET-SDK/)
 
+**_Need help with your integration to JazzHR? Reach out to https://zailous.com/contact today. We'd be more than happy to help!_**
+
 The JazzHR .NET SDK provides class libraries for accessing the JazzHR V1 API quickly, easily, and with confidence.
 It supports .Net 7.0.
 
