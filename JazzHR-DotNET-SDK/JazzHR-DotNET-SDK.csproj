@@ -18,8 +18,8 @@
     <PackageProjectUrl>https://github.com/zailous1/JazzHR-DotNet-SDK</PackageProjectUrl>
     <RepositoryUrl>https://github.com/zailous1/JazzHR-DotNet-SDK</RepositoryUrl>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
-    <FileVersion>1.0.0</FileVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
     <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
     <PackageTags>JazzHR</PackageTags>
     <RepositoryType>git</RepositoryType>

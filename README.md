@@ -3,12 +3,13 @@
 JazzHR-DotNET-SDK
 =============
 
-**Unofficial C# .NET SDK for JazzHR**<br/><br/>
-**Note: This enthusiast project is not affiliated with JazzHR or its parent company Employ Inc in any way. Use at your own risk. YMMV. We make no guarantees of any kind.**
+## Unofficial C# .NET SDK for JazzHR
 
-**License:** [![Apache 2](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/license/mit/)<br/>
-**Support:** [![Help](https://img.shields.io/badge/Support-Zailous%20Developer-blue.svg)](https://zailous.com/contact)<br/>
-**Binaries:** [![Nuget](https://img.shields.io/badge/Nuget-Package-blue.svg)](https://www.nuget.org/packages/JazzHR-DotNET-SDK/)<br/>
+**Note: This project is not affiliated with JazzHR or its parent company Employ, Inc. in any way. Use at your own risk. YMMV. We make no guarantees of any kind.**
+
+**License:** [![Apache 2](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/license/mit/)  
+**Support:** [![Help](https://img.shields.io/badge/Support-Zailous%20Developer-blue.svg)](https://zailous.com/contact)  
+**Binaries:** [![Nuget](https://img.shields.io/badge/Nuget-Package-blue.svg)](https://www.nuget.org/packages/JazzHR-DotNET-SDK/)
 
 The JazzHR .NET SDK provides class libraries for accessing the JazzHR V1 API quickly, easily, and with confidence.
 It supports .Net 7.0.
@@ -56,7 +57,7 @@ namespace ConsoleApp1
 }
 ```
 
-# Contribution Guidelines:
+## Contribution Guidelines:
 
 Thank you for your interest in contributing to this project. You can report and fix existing bugs. Feel free to open issues and/or send pull requests.
 
