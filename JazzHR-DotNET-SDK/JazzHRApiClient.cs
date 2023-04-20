@@ -78,7 +78,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await DeserializeApiResponse<Activity>($"activities/{id}");
+                return await DeserializeApiResponse<Activity>($"activities/{id}").ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -96,7 +96,7 @@ namespace Zailous.JazzHR
         /// property contains an <see cref="IEnumerable{T}"/> of <see cref="Activity"/> objects.
         /// </returns>
         public async Task<IEnumerable<Activity>> GetActivitiesAsync()
-            => await GetActivitiesAsync(null);
+            => await GetActivitiesAsync(null).ConfigureAwait(false);
 
         /// <summary>
         /// Retrieves activities asynchronously with optional filtering using the specified variables.
@@ -111,7 +111,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await GetAsync<Activity>("activities", vars);
+                return await GetAsync<Activity>("activities", vars).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -133,7 +133,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await DeserializeApiResponse<ApplicantDetail>($"applicants/{id}");
+                return await DeserializeApiResponse<ApplicantDetail>($"applicants/{id}").ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -151,7 +151,7 @@ namespace Zailous.JazzHR
         /// property contains an <see cref="IEnumerable{T}"/> of <see cref="Applicant"/> objects.
         /// </returns>
         public async Task<IEnumerable<Applicant>> GetApplicantsAsync()
-            => await GetApplicantsAsync(null);
+            => await GetApplicantsAsync(null).ConfigureAwait(false);
 
         /// <summary>
         /// Retrieves applicants asynchronously with optional filtering using the specified variables.
@@ -166,7 +166,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await GetAsync<Applicant>("applicants", vars);
+                return await GetAsync<Applicant>("applicants", vars).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -184,7 +184,7 @@ namespace Zailous.JazzHR
         /// property contains an <see cref="IEnumerable{T}"/> of <see cref="ApplicantJobMapping"/> objects.
         /// </returns>
         public async Task<IEnumerable<ApplicantJobMapping>> GetApplicantJobMappingsAsync()
-            => await GetApplicantJobMappingsAsync(null);
+            => await GetApplicantJobMappingsAsync(null).ConfigureAwait(false);
 
         /// <summary>
         /// Retrieves applicant-job mappings asynchronously with optional filtering using the specified variables.
@@ -199,7 +199,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await GetAsync<ApplicantJobMapping>("applicants2jobs", vars);
+                return await GetAsync<ApplicantJobMapping>("applicants2jobs", vars).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -221,7 +221,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await DeserializeApiResponse<ApplicantJobMapping>($"applicants2jobs/{id}");
+                return await DeserializeApiResponse<ApplicantJobMapping>($"applicants2jobs/{id}").ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -242,7 +242,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await GetAsync<Hire>("hires", null);
+                return await GetAsync<Hire>("hires", null).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -264,7 +264,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await DeserializeApiResponse<Category>($"categories/{id}");
+                return await DeserializeApiResponse<Category>($"categories/{id}").ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -282,7 +282,7 @@ namespace Zailous.JazzHR
         /// property contains an <see cref="IEnumerable{T}"/> of <see cref="Category"/> objects.
         /// </returns>
         public async Task<IEnumerable<Category>> GetCategoriesAsync()
-            => await GetCategoriesAsync(null);
+            => await GetCategoriesAsync(null).ConfigureAwait(false);
 
         /// <summary>
         /// Retrieves categories asynchronously with optional filtering using the specified variables.
@@ -297,7 +297,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await GetAsync<Category>("categories", vars);
+                return await GetAsync<Category>("categories", vars).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -321,7 +321,7 @@ namespace Zailous.JazzHR
             try
             {
                 _ = request ?? throw new ArgumentNullException(nameof(request));
-                return await PostAsync<CreateCategoryResponse>("categories", request);
+                return await PostAsync<CreateCategoryResponse>("categories", request).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -343,7 +343,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await DeserializeApiResponse<JobDetail>($"jobs/{id}");
+                return await DeserializeApiResponse<JobDetail>($"jobs/{id}").ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -362,7 +362,7 @@ namespace Zailous.JazzHR
         /// property contains an <see cref="IEnumerable{T}"/> of <see cref="JobDetail"/> objects representing all jobs in the system.
         /// </returns>
         public async Task<IEnumerable<JobDetail>> GetJobsAsync()
-            => await GetJobsAsync(null);
+            => await GetJobsAsync(null).ConfigureAwait(false);
 
         /// <summary>
         /// Retrieves all jobs asynchronously with optional filtering.
@@ -377,7 +377,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await GetAsync<JobDetail>("jobs", vars);
+                return await GetAsync<JobDetail>("jobs", vars).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -400,7 +400,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await _httpClient.DownloadAsync(url);
+                return await _httpClient.DownloadAsync(url).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -425,7 +425,7 @@ namespace Zailous.JazzHR
             {
                 _ = request ?? throw new ArgumentNullException(nameof(request));
 
-                return await PostAsync<CreateCategoryApplicantMappingResponse>("categories2applicants", request);
+                return await PostAsync<CreateCategoryApplicantMappingResponse>("categories2applicants", request).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -444,7 +444,7 @@ namespace Zailous.JazzHR
         /// representing all the users in the system.
         /// </returns>
         public async Task<IEnumerable<User>> GetUsersAsync()
-            => await GetUsersAsync(null);
+            => await GetUsersAsync(null).ConfigureAwait(false);
 
         /// <summary>
         /// Gets a list of all users asynchronously with optional filtering and pagination.
@@ -461,7 +461,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await GetAsync<User>("users", vars);
+                return await GetAsync<User>("users", vars).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -484,7 +484,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                return await DeserializeApiResponse<UserDetail>($"users/{id}");
+                return await DeserializeApiResponse<UserDetail>($"users/{id}").ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -511,7 +511,7 @@ namespace Zailous.JazzHR
             {
                 _ = request ?? throw new ArgumentNullException(nameof(request));
 
-                return await PostAsync<CreateNoteResponse>("notes", request);
+                return await PostAsync<CreateNoteResponse>("notes", request).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -542,7 +542,7 @@ namespace Zailous.JazzHR
                 do
                 {
                     pageNum++;
-                    items = await GetPageAsync<T>(subpath, pathVars, pageNum);
+                    items = await GetPageAsync<T>(subpath, pathVars, pageNum).ConfigureAwait(false);
                     if (items.Any())
                     {
                         results.AddRange(items);
@@ -575,7 +575,7 @@ namespace Zailous.JazzHR
                 request.ApiKey = ApiKey;
                 string body = JsonConvert.SerializeObject(request);
 
-                string? response = await _httpClient.PostAsync(subpath, body);
+                string? response = await _httpClient.PostAsync(subpath, body).ConfigureAwait(false);
                 _ = response ?? throw new ArgumentNullException(nameof(response));
 
                 T? result = JsonConvert.DeserializeObject<T>(response);
@@ -610,7 +610,7 @@ namespace Zailous.JazzHR
 
             subpath += $"/page/{pageNum}";
 
-            string? response = await _httpClient.GetAsync(subpath);
+            string? response = await _httpClient.GetAsync(subpath).ConfigureAwait(false);
 
             if (string.IsNullOrWhiteSpace(response))
             {
@@ -654,7 +654,7 @@ namespace Zailous.JazzHR
         {
             try
             {
-                string? response = await _httpClient.GetAsync(subpath);
+                string? response = await _httpClient.GetAsync(subpath).ConfigureAwait(false);
 
                 return !string.IsNullOrWhiteSpace(response)
                     ? JsonConvert.DeserializeObject<T>(response)
