@@ -1,6 +1,4 @@
 using FluentAssertions;
-using Zailous.JazzHR;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
