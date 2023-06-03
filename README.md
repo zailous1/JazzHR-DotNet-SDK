@@ -13,7 +13,7 @@ JazzHR-DotNET-SDK
 
 **_Need help with your integration to JazzHR? Reach out to https://zailous.com/contact today. We'd be more than happy to help!_**
 
-The JazzHR .NET SDK provides class libraries for accessing the JazzHR V1 API quickly, easily, and with confidence.
+The JazzHR .NET SDK provides class libraries for quickly, easily, and confidently accessing the JazzHR V1 API.
 It supports .Net 7.0.
 
 Some of the features include:
@@ -28,7 +28,7 @@ Some of the features include:
 [API Reference](http://www.resumatorapi.com/v1/)
 
 ## Get Started:
-1. Clone this repo locally
+1. Clone this repo locally.
 2. Open the JazzHR-DotNET-SDK.sln solution file in your .NET IDE of choice.
 3. Review the unit tests.
 
@@ -64,10 +64,10 @@ namespace ConsoleApp1
 Thank you for your interest in contributing to this project. You can report and fix existing bugs. Feel free to open issues and/or send pull requests.
 
 - Before sending a PR, please discuss the issue with the project admins.
-    - If the issue is not yet known, open a new issue and discuss.
+    - If the issue is not yet known, open a new issue and discuss it.
     - Come to an agreement on the proposal before beginning work on the solution.
 
-The `main` branch of this repository contains the latest stable release of the SDK. Pull requests should be submitted against `main` by forking this repo into your account, developing and testing your changes, and creating pull requests to request merges. See the [Contributing to a Project](https://guides.github.com/activities/contributing-to-open-source/)
+This repository's `main` branch contains the latest stable release of the SDK. Pull requests should be submitted against `main` by forking this repo into your account, developing and testing your changes, and creating pull requests to request merges. See the [Contributing to a Project](https://guides.github.com/activities/contributing-to-open-source/)
 article for more details about how to contribute.
 
 ### Steps to Contribute:
@@ -75,7 +75,7 @@ article for more details about how to contribute.
 1. Fork this repository into your account on Github
 2. Clone *your forked repository* (not our original one) down locally with `git clone https://github.com/YOURUSERNAME/JazzHR-DotNET-SDK.git`
 3. Develop and validate your changes
-5. Create a pull request for review to request merge
+5. Create a pull request for review to request a merge
 6. Obtain approval in order to have your changes merged
 
 Note: Before you submit the pull request, make sure to remove the keys and tokens from appsettings.json
