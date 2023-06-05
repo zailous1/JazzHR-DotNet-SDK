@@ -18,6 +18,7 @@ It supports .Net 7.0.
 
 Some of the features include:
 
+* Throttling capabilities.
 * Filter objects for targeting queries.
 * Full asynchronous method support (async/await).
 * Support for JSON request and response formats.
